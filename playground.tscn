@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://8lidg4hqe43w"]
+
+[ext_resource type="PackedScene" uid="uid://cfa3xni5hj64u" path="res://player/player.tscn" id="1_rupst"]
+
+[sub_resource type="Gradient" id="Gradient_edjgo"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rupst"]
+gradient = SubResource("Gradient_edjgo")
+width = 32
+height = 32
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wt17y"]
+size = Vector2(32, 32)
+
+[node name="Playground" type="Node2D" unique_id=209805535]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=327496884]
+position = Vector2(241.00002, 268)
+scale = Vector2(15.90625, 1)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1641043876]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1365572070]
+shape = SubResource("RectangleShape2D_wt17y")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2145157340]
+position = Vector2(310.00003, 226.99998)
+rotation = 0.005185317
+scale = Vector2(2.4509223, 1.660325)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D2" unique_id=2097195273]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/StaticBody2D" unique_id=1754916103]
+shape = SubResource("RectangleShape2D_wt17y")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1472932277]
+position = Vector2(203.00002, 216)
+rotation = -0.62105906
+scale = Vector2(5.2289705, 0.5498381)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D3" unique_id=206704938]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D3/StaticBody2D" unique_id=416344795]
+shape = SubResource("RectangleShape2D_wt17y")
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." unique_id=31848370 instance=ExtResource("1_rupst")]
+position = Vector2(173, 76)
